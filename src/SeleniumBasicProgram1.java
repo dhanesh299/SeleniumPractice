@@ -9,6 +9,7 @@ public class SeleniumBasicProgram1 {
 	public static void main(String[] args) throws InterruptedException {
 		
 		System.out.println("Program start...");
+		// Change to be seen in git repository after push
 		
 		// Driver setup --> In the current version of Selenium jar package, all 4 browser's drivers are added by default
 		// System.setProperty("webdriver.chrome.driver.","C:\\My Folder\\7-Learning\\QA\\Dependencies\\Web Drivers\\Chrome\\chromedriver-win64\\chromedriver.exe");
@@ -27,6 +28,7 @@ public class SeleniumBasicProgram1 {
 		
 		if(expectedTitle.equals(actualTitle)) {
 			System.out.println("The correct url is loaded!");
+			
 		}
 		
 		Thread.sleep(3000);

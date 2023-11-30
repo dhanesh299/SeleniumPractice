@@ -11,6 +11,7 @@ public class SeleniumBasicProgram1 {
 		System.out.println("Program start...");
 		// Change to be seen in git repository after push
 		// Try 2
+		// push from user 2
 		
 		// Driver setup --> In the current version of Selenium jar package, all 4 browser's drivers are added by default
 		// System.setProperty("webdriver.chrome.driver.","C:\\My Folder\\7-Learning\\QA\\Dependencies\\Web Drivers\\Chrome\\chromedriver-win64\\chromedriver.exe");

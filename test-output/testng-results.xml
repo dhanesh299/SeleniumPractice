@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-01T20:02:30 IST" name="TestNGSuite" finished-at="2023-12-01T20:02:42 IST" duration-ms="11548">
+    <groups>
+    </groups>
+    <test started-at="2023-12-01T20:02:30 IST" name="TestNGTest" finished-at="2023-12-01T20:02:42 IST" duration-ms="11548">
+      <class name="TestNGCases">
+        <test-method is-config="true" signature="initialiseBrowser()[pri:0, instance:TestNGCases@201a4587]" started-at="2023-12-01T20:02:30 IST" name="initialiseBrowser" finished-at="2023-12-01T20:02:35 IST" duration-ms="4186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialiseBrowser -->
+        <test-method is-config="true" signature="loadURL()[pri:0, instance:TestNGCases@201a4587]" started-at="2023-12-01T20:02:35 IST" name="loadURL" finished-at="2023-12-01T20:02:39 IST" duration-ms="4166" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadURL -->
+        <test-method signature="verifyPageLoaded()[pri:0, instance:TestNGCases@201a4587]" started-at="2023-12-01T20:02:39 IST" name="verifyPageLoaded" finished-at="2023-12-01T20:02:39 IST" duration-ms="44" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageLoaded -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:TestNGCases@201a4587]" started-at="2023-12-01T20:02:39 IST" name="quitBrowser" finished-at="2023-12-01T20:02:42 IST" duration-ms="3036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitBrowser -->
+      </class> <!-- TestNGCases -->
+    </test> <!-- TestNGTest -->
+  </suite> <!-- TestNGSuite -->
+</testng-results>

@@ -1,3 +1,5 @@
+package test;
+
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
@@ -47,7 +49,7 @@ public class TestNGCases {
 	@Test
 	public void verifyPageLoaded() {
 		// Verify page load with page title
-		String expectedTitle="Book bus tickets online with redBus!";
+		String expectedTitle="Online Bus Ticket Booking with Best Offers and Lowest Price - redBus";
 		String actualTitle=driver.getTitle();
 		System.out.println(actualTitle);
 		

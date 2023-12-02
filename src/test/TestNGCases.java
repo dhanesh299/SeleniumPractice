@@ -19,17 +19,19 @@ import org.testng.annotations.Test;
 public class TestNGCases {
 	
 	WebDriver driver;
-	String browser="chrome";
+	String browser=System.getProperty("browser");
+	// String browser="chrome";
 	String url="https://www.redbus.in/";
 	
 	@BeforeClass
 	public void initialiseBrowser() {
-
+		System.out.println("Browser is: " + browser);
+		
 		// Driver setup --> In the current version of Selenium jar package, all 4 browser's drivers are added by default
 		// System.setProperty("webdriver.chrome.driver.","C:\\My Folder\\7-Learning\\QA\\Dependencies\\Web Drivers\\Chrome\\chromedriver-win64\\chromedriver.exe");
 									
-		if (browser=="chrome") {
-			driver= new ChromeDriver();
+		if (browser.equals("chrome")) {
+			driver=new ChromeDriver();
 		}
 		else if (browser.equals("firefox")) {
 			driver=new FirefoxDriver();

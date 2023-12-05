@@ -5,10 +5,9 @@
     <classes>
       <class name="test.TestNGCases">
         <methods>
-          <include name="verifyPageLoaded"/>
-          <include name="initialiseBrowser"/>
-          <include name="loadURL"/>
-          <include name="quitBrowser"/>
+          <include name="initializeTest"/>
+          <include name="loadPage"/>
+          <include name="endTest"/>
         </methods>
       </class> <!-- test.TestNGCases -->
     </classes>

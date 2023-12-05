@@ -127,6 +127,7 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<suiteXmlFile>testNG-TestSelection.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

@@ -1,5 +1,6 @@
 package test;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
@@ -16,53 +17,47 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class TestNGCases {
-	
-	WebDriver driver;
-	String browser=System.getProperty("browser");
-	// String browser="chrome";
-	String url="https://www.redbus.in/";
+import Resources.base;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class TestNGCases extends base{
 	
 	@BeforeClass
-	public void initialiseBrowser() {
-		System.out.println("Browser is: " + browser);
-		
-		// Driver setup --> In the current version of Selenium jar package, all 4 browser's drivers are added by default
-		// System.setProperty("webdriver.chrome.driver.","C:\\My Folder\\7-Learning\\QA\\Dependencies\\Web Drivers\\Chrome\\chromedriver-win64\\chromedriver.exe");
-									
-		if (browser.equals("chrome")) {
-			driver=new ChromeDriver();
-		}
-		else if (browser.equals("firefox")) {
-			driver=new FirefoxDriver();
-		}
-		else if (browser.equals("edge")) {
-			driver=new EdgeDriver();
-		}
+	public void initializeTest() throws IOException {
+		System.out.println("Test initializing...");
+		initializeValues();
+		driver=initializeBrowser();
+		System.out.println(testUrl);
+		System.out.println("Test initialized.");
 	}
 	
-	@BeforeClass
-	public void loadURL() {
-		driver.get(url);
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-	}
-	
+//	@Test
+//	public void test1() {
+//		System.out.println("test");
+//		WebDriverManager.chromedriver().setup();
+//		driver = new ChromeDriver();
+//		driver.get("https://www.google.com/");
+//		driver
+//	}
+//	
 	@Test
-	public void verifyPageLoaded() {
-		// Verify page load with page title
+	public void loadPage() {
+		System.out.println("Loading URL: " + testUrl);
+		WebDriverManager.chromedriver().setup();
+		driver.get(testUrl);
 		String expectedTitle="Online Bus Ticket Booking with Best Offers and Lowest Price - redBus";
 		String actualTitle=driver.getTitle();
 		System.out.println(actualTitle);
 		
 		Assert.assertTrue(expectedTitle.equals(actualTitle));
-		System.out.println("Correct page is loaded");
+		System.out.println("Correct page is loaded"); // Assertion gets true, this will be executed
 	}
 	
-	@AfterClass
-	public void quitBrowser() throws InterruptedException {
-		Thread.sleep(2000);
+
+	@AfterClass(timeOut=3000)
+	public void endTest() throws InterruptedException {
+//		Thread.sleep(2000);
 		driver.quit();
-		System.out.println("...Program End");
+		System.out.println("Test Ended");
 	}
 }

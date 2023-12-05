@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class SeleniumBasicProgram1 {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -22,7 +24,9 @@ public class SeleniumBasicProgram1 {
 		// System.setProperty("webdriver.chrome.driver.","C:\\My Folder\\7-Learning\\QA\\Dependencies\\Web Drivers\\Chrome\\chromedriver-win64\\chromedriver.exe");
 				
 		// Driver declaration
-		WebDriver driver=new ChromeDriver();
+		WebDriver driver=null;
+		WebDriverManager.chromedriver().setup();
+		driver=new ChromeDriver();
 		driver.get("https://www.redbus.in/");
 		System.out.println("Page load complete!");
 		

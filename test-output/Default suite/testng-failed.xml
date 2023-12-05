@@ -5,7 +5,9 @@
     <classes>
       <class name="test.TestNGCases">
         <methods>
-          <include name="test1"/>
+          <include name="initializeTest"/>
+          <include name="homePage"/>
+          <include name="endTest"/>
         </methods>
       </class> <!-- test.TestNGCases -->
     </classes>

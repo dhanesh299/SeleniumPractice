@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-05T21:23:03 IST" name="TestNG-Suite" finished-at="2023-12-05T21:23:12 IST" duration-ms="9347">
+  <suite started-at="2023-12-05T22:55:48 IST" name="Default suite" finished-at="2023-12-05T22:56:00 IST" duration-ms="11910">
     <groups>
     </groups>
-    <test started-at="2023-12-05T21:23:03 IST" name="TestNG Cases" finished-at="2023-12-05T21:23:12 IST" duration-ms="9347">
+    <test started-at="2023-12-05T22:55:48 IST" name="Default test" finished-at="2023-12-05T22:56:00 IST" duration-ms="11910">
       <class name="test.TestNGCases">
-        <test-method is-config="true" signature="initializeTest()[pri:0, instance:test.TestNGCases@54a7079e]" started-at="2023-12-05T21:23:03 IST" name="initializeTest" finished-at="2023-12-05T21:23:07 IST" duration-ms="4148" status="PASS">
+        <test-method is-config="true" signature="initializeTest()[pri:0, instance:test.TestNGCases@54a7079e]" started-at="2023-12-05T22:55:48 IST" name="initializeTest" finished-at="2023-12-05T22:55:55 IST" duration-ms="6626" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeTest -->
-        <test-method signature="loadPage()[pri:0, instance:test.TestNGCases@54a7079e]" started-at="2023-12-05T21:23:07 IST" name="loadPage" finished-at="2023-12-05T21:23:11 IST" duration-ms="4163" status="PASS">
+        <test-method signature="homePage()[pri:0, instance:test.TestNGCases@54a7079e]" started-at="2023-12-05T22:55:55 IST" name="homePage" finished-at="2023-12-05T22:55:59 IST" duration-ms="4220" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loadPage -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:test.TestNGCases@54a7079e]" started-at="2023-12-05T21:23:11 IST" name="endTest" finished-at="2023-12-05T21:23:12 IST" duration-ms="933" status="PASS">
+        </test-method> <!-- homePage -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:test.TestNGCases@54a7079e]" started-at="2023-12-05T22:55:59 IST" name="endTest" finished-at="2023-12-05T22:56:00 IST" duration-ms="962" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
       </class> <!-- test.TestNGCases -->
-    </test> <!-- TestNG Cases -->
-  </suite> <!-- TestNG-Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

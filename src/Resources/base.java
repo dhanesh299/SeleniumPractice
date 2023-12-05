@@ -12,27 +12,31 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class base extends OwnMethods {
+public class base extends Reusables {
 	
 	public WebDriver driver=null;
+	public Boolean jenkinExecutionFlag=null;
 	public String testBrowser=null;
 	public String testUrl=null;
 	
 	public void initializeValues() throws IOException {
-		System.out.println("Intializing values...");
 		
-		testBrowser=getValueFromPropertiesFile("testBrowser");
-		System.out.println("Browser value set");
+		jenkinExecutionFlag=getBooleanValueFromDataProperties("jenkinsExecutionON");
 		
-		testUrl=getValueFromPropertiesFile("testUrl");
-		System.out.println("URL value set");
+		if (jenkinExecutionFlag.equals(true)) {
+			testBrowser=getValueFromJenkinsBuildParamater("browser"); // fetches from Jenkin - Build parameter
+		}
+		else {
+			testBrowser=getStringValueFromDataProperties("testBrowser"); //fetched from data.properties
+		}
 		
-		System.out.println("Values Initialized.");
+		testUrl=getStringValueFromDataProperties("testUrl");
+		System.out.println("Initialise Values - Done!");
 	}
 	
 	public WebDriver initializeBrowser() throws IOException {
 
-		// String browser=System.getProperty("browser"); // Gets value from browser parameter passed by the jenkins
+		 // Gets value from browser parameter passed by the jenkins
 											
 		if (testBrowser.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -49,7 +53,6 @@ public class base extends OwnMethods {
 			driver = new EdgeDriver();
 			System.out.println("Driver set to Edge");
 		}
-		System.out.println("URL loaded");
 		return driver; 
 	}
 

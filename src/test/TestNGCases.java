@@ -31,32 +31,20 @@ public class TestNGCases extends base{
 		System.out.println("Test initialized.");
 	}
 	
-//	@Test
-//	public void test1() {
-//		System.out.println("test");
-//		WebDriverManager.chromedriver().setup();
-//		driver = new ChromeDriver();
-//		driver.get("https://www.google.com/");
-//		driver
-//	}
-//	
 	@Test
-	public void loadPage() {
-		System.out.println("Loading URL: " + testUrl);
+	public void homePage() {
 		WebDriverManager.chromedriver().setup();
 		driver.get(testUrl);
+		driver.manage().window().maximize();
+		System.out.println("Loaded URL: " + testUrl);
 		String expectedTitle="Online Bus Ticket Booking with Best Offers and Lowest Price - redBus";
 		String actualTitle=driver.getTitle();
-		System.out.println(actualTitle);
-		
 		Assert.assertTrue(expectedTitle.equals(actualTitle));
-		System.out.println("Correct page is loaded"); // Assertion gets true, this will be executed
+		System.out.println("Expected title : " + expectedTitle + " matches with " + "Actual title: " + actualTitle); // Assertion gets true, this will be executed
 	}
-	
 
-	@AfterClass(timeOut=3000)
+	@AfterClass(timeOut=5000)
 	public void endTest() throws InterruptedException {
-//		Thread.sleep(2000);
 		driver.quit();
 		System.out.println("Test Ended");
 	}

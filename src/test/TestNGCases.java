@@ -27,16 +27,16 @@ public class TestNGCases extends base{
 		System.out.println("Test initializing...");
 		initializeValues();
 		driver=initializeBrowser();
-		System.out.println(testUrl);
+		System.out.println(urlValue);
 		System.out.println("Test initialized.");
 	}
 	
 	@Test
 	public void homePage() {
 		WebDriverManager.chromedriver().setup();
-		driver.get(testUrl);
+		driver.get(urlValue);
 		driver.manage().window().maximize();
-		System.out.println("Loaded URL: " + testUrl);
+		System.out.println("Loaded URL: " + urlValue);
 		String expectedTitle="Online Bus Ticket Booking with Best Offers and Lowest Price - redBus";
 		String actualTitle=driver.getTitle();
 		Assert.assertTrue(expectedTitle.equals(actualTitle));

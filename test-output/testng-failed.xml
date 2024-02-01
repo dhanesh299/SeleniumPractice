@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.TestNGCases">
+      <class name="uiOperations.SeleniumUIOperations">
         <methods>
-          <include name="initializeTest"/>
-          <include name="homePage"/>
           <include name="endTest"/>
+          <include name="enterSearch"/>
+          <include name="initializeTest"/>
         </methods>
-      </class> <!-- test.TestNGCases -->
+      </class> <!-- uiOperations.SeleniumUIOperations -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

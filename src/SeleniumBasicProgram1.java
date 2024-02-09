@@ -22,11 +22,10 @@ public class SeleniumBasicProgram1 {
 		
 		// Driver setup --> In the current version of Selenium jar package, all 4 browser's drivers are added by default
 		// System.setProperty("webdriver.chrome.driver.","C:\\My Folder\\7-Learning\\QA\\Dependencies\\Web Drivers\\Chrome\\chromedriver-win64\\chromedriver.exe");
-				
+		// WebDriverManager.chromedriver().setup();
+		
 		// Driver declaration
-		WebDriver driver=null;
-		WebDriverManager.chromedriver().setup();
-		driver=new ChromeDriver();
+		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.redbus.in/");
 		System.out.println("Page load complete!");
 		

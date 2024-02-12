@@ -22,7 +22,7 @@ public class base extends Reusables {
 	public String urlValue=null;
 	
 	public String jenkinFlagKey="jenkinsExecutionON";
-	public String jenkinBrowserParameter="testBrowser";
+	public String jenkinBrowserParameter="browser";
 	public String jenkinFlagValue=null;
 
 	

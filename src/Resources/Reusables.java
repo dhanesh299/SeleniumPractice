@@ -26,6 +26,7 @@ public class Reusables {
 	
 	public String getValueFromSystemProperty(String property_key) {
 		String property_value=System.getProperty(property_key);
+		System.out.println("Value retrieved for " + property_key + " = " + property_value);
 		return property_value;
 	}
 }

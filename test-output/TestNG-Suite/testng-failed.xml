@@ -6,7 +6,7 @@
       <class name="test.TestNGCases">
         <methods>
           <include name="initializeTest"/>
-          <include name="loadPage"/>
+          <include name="homePage"/>
           <include name="endTest"/>
         </methods>
       </class> <!-- test.TestNGCases -->

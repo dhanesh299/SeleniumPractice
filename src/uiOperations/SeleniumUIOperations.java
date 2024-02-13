@@ -16,7 +16,7 @@ public class SeleniumUIOperations extends base {
 	public void initializeTest() throws IOException {
 		System.out.println("Test initializing...");
 		initializeValues();
-		driver=initializeBrowser();
+		initializeBrowser();
 		System.out.println(urlValue);
 		System.out.println("Test initialized.");
 	}

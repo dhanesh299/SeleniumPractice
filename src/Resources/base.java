@@ -31,7 +31,7 @@ public class base extends Reusables {
 		jenkinFlagValue=getValueFromDataProperties(jenkinFlagKey);
 		
 		if (jenkinFlagValue.equals("true")) {
-			browserValue=getValueFromDataProperties(jenkinBrowserParameter); // fetches from Jenkin - Build parameter
+			browserValue=getValueFromSystemProperty(jenkinBrowserParameter); // fetches from Jenkin - Build parameter
 		}
 		else {
 			browserValue=getValueFromDataProperties(browserKey); //fetched from data.properties

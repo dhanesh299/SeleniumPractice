@@ -10,8 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import Resources.Reusables;
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class base extends Reusables {
 	
 	public WebDriver driver=null;
@@ -39,6 +39,7 @@ public class base extends Reusables {
 		
 		urlValue=getValueFromDataProperties(urlKey);
 		System.out.println("Initialise Values - Done!");
+
 	}
 	
 	public WebDriver initializeBrowser() throws IOException {
@@ -46,21 +47,22 @@ public class base extends Reusables {
 		 // Gets value from browser parameter passed by the jenkins
 											
 		if (browserValue.equals("chrome")) {
-			WebDriverManager.chromedriver().setup();
+			//WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			System.out.println("Driver set to Chrome");
 		}
 		else if (browserValue.equals("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+			//WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			System.out.println("Driver set to Firefox");
 		}
 		else if (browserValue.equals("edge")) {
-			WebDriverManager.edgedriver().setup();
+			//WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			System.out.println("Driver set to Edge");
 		}
-		return driver; 
+		return driver;
+
 	}
 
 }

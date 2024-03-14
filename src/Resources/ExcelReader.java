@@ -59,7 +59,7 @@ public class ExcelReader extends base {
 		}
 	}
 
-	public void getCellValueByColumnHeaders(String column1Header, String column1Value, String column2Header) {
+	public void getCellValueByColumnHeadersAndValue(String column1Header, String column1Value, String column2Header) {
             try {
             	String excelSource = getValueFromDataProperties("excelSource");
 

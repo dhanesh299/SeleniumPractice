@@ -5,9 +5,9 @@
     <classes>
       <class name="test.TestNGCases">
         <methods>
-          <include name="initializeTest"/>
-          <include name="homePage"/>
-          <include name="endTest"/>
+          <include name="getFromExcelSource"/>
+          <include name="SetValuesTest"/>
+          <include name="quitBrowserTest"/>
         </methods>
       </class> <!-- test.TestNGCases -->
     </classes>

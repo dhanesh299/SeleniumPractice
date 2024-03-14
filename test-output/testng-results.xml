@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-13T12:47:29 IST" name="TestNG-Suite" finished-at="2024-02-13T12:47:43 IST" duration-ms="14113">
+  <suite started-at="2024-03-14T12:17:29 IST" name="Default suite" finished-at="2024-03-14T12:17:32 IST" duration-ms="3562">
     <groups>
     </groups>
-    <test started-at="2024-02-13T12:47:29 IST" name="TestNG Cases" finished-at="2024-02-13T12:47:43 IST" duration-ms="14113">
+    <test started-at="2024-03-14T12:17:29 IST" name="Default test" finished-at="2024-03-14T12:17:32 IST" duration-ms="3562">
       <class name="test.TestNGCases">
-        <test-method is-config="true" signature="SetValuesTest()[pri:0, instance:test.TestNGCases@26e356f0]" started-at="2024-02-13T12:47:29 IST" name="SetValuesTest" finished-at="2024-02-13T12:47:34 IST" duration-ms="5449" status="PASS">
+        <test-method signature="readExcel()[pri:0, instance:test.TestNGCases@506ae4d4]" started-at="2024-03-14T12:17:29 IST" name="readExcel" finished-at="2024-03-14T12:17:32 IST" duration-ms="3480" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SetValuesTest -->
-        <test-method signature="homePageTest()[pri:0, instance:test.TestNGCases@26e356f0]" started-at="2024-02-13T12:47:34 IST" name="homePageTest" finished-at="2024-02-13T12:47:41 IST" duration-ms="6583" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- homePageTest -->
-        <test-method is-config="true" signature="quitBrowserTest()[pri:0, instance:test.TestNGCases@26e356f0]" started-at="2024-02-13T12:47:41 IST" name="quitBrowserTest" finished-at="2024-02-13T12:47:43 IST" duration-ms="1975" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quitBrowserTest -->
+        </test-method> <!-- readExcel -->
       </class> <!-- test.TestNGCases -->
-    </test> <!-- TestNG Cases -->
-  </suite> <!-- TestNG-Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

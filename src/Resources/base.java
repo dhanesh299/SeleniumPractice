@@ -24,12 +24,15 @@ public class base extends Reusables {
 	public String jenkinFlagKey="jenkinsExecutionON";
 	public String jenkinBrowserParameter="browser";
 	public String jenkinFlagValue=null;
-
+	
+	public static String excelPathKey="excelPath";
+	public static String excelPathValue=null;
+	public static String excelSourceKey="excelSource";
+	public static String excelSourceValue=null;
 	
 	public void initializeValues() throws IOException {
 		
 		jenkinFlagValue=getValueFromDataProperties(jenkinFlagKey);
-		
 		if (jenkinFlagValue.equals("true")) {
 			browserValue=getValueFromSystemProperty(jenkinBrowserParameter); // fetches from Jenkin - Build parameter
 		}
@@ -38,6 +41,9 @@ public class base extends Reusables {
 		}
 		
 		urlValue=getValueFromDataProperties(urlKey);
+		excelPathValue=getValueFromDataProperties(excelPathKey);
+		excelSourceValue=getValueFromDataProperties(excelSourceKey);
+		
 		System.out.println("Initialise Values - Done!");
 
 	}
